@@ -1,8 +1,8 @@
 /* General Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #e8f5e9; /* Light green background */
+    color: #1b5e20; /* Deep green text */
     margin: 0;
     padding: 0;
   }
@@ -14,10 +14,10 @@ body {
   
   /* Header */
   h1 {
-    font-size: 2.5rem;
-    color: #1b5e20;
+    font-size: 2.8rem;
+    color: #2e7d32; /* Darker green */
     font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
   }
   
   /* Difficulty Selection */
@@ -28,11 +28,26 @@ body {
   
   .difficulty-btn {
     width: 150px;
-    margin: 0 10px;
-    padding: 10px;
+    margin: 10px;
+    padding: 12px;
     font-size: 1.2rem;
+    color: #fff;
     border-radius: 30px;
+    border: none;
     transition: background-color 0.3s ease;
+  }
+  
+  .difficulty-btn:nth-child(1) {
+    background-color: #4caf50; /* Easy - Green */
+  }
+  
+  .difficulty-btn:nth-child(2) {
+    background-color: #ffc107; /* Medium - Yellow */
+    color: #000;
+  }
+  
+  .difficulty-btn:nth-child(3) {
+    background-color: #f44336; /* Hard - Red */
   }
   
   .difficulty-btn:hover {
@@ -42,10 +57,12 @@ body {
   /* Difficulty Box */
   #difficultyBox {
     font-size: 1.2rem;
-    background-color: #e8f5e9;
+    background-color: #c8e6c9;
     border: 2px solid #1b5e20;
     color: #1b5e20;
+    padding: 10px;
     border-radius: 8px;
+    margin-top: 20px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   }
   
@@ -56,15 +73,24 @@ body {
     color: #1b5e20;
   }
   
+  /* Input and Guess Button */
   #letterInput {
     font-size: 1.2rem;
     padding: 10px;
     border: 2px solid #1b5e20;
     border-radius: 8px;
+    background-color: #f1f8e9;
+    color: #2e7d32;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  #letterInput:focus {
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+    outline: none;
   }
   
   #guessBtn {
-    background-color: #ffcc00;
+    background-color: #ffeb3b; /* Yellow */
     color: #000;
     padding: 10px 20px;
     font-size: 1rem;
@@ -75,7 +101,7 @@ body {
   }
   
   #guessBtn:hover {
-    background-color: #ffb300;
+    background-color: #fbc02d;
   }
   
   /* Wrong Letters */
@@ -86,7 +112,7 @@ body {
   
   /* Shamrock Image */
   .shamrock-img {
-    width: 150px;
+    width: 180px;
     margin-top: 20px;
     transition: transform 0.3s ease;
   }
@@ -139,20 +165,14 @@ body {
       margin-bottom: 10px;
     }
   
-    #guessBtn {
-      width: 100%;
-    }
-  
-    #letterInput {
-      width: 100%;
-    }
-  
+    #guessBtn,
+    #letterInput,
     #restartBtn {
       width: 100%;
     }
   
     .shamrock-img {
-      width: 120px;
+      width: 140px;
     }
   }
   

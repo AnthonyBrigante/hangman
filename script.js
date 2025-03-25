@@ -110,15 +110,21 @@ const wordList = [
   
   }
   
-  function updateWrongGuess(guessedLetter){ 
+  function updateWrongGuess(guessedLetter) { 
     wrongGuesses++
-    document.getElementById('wrongLetters').textContent += `${guessedLetter}`
-    //document.getElementById('shamrock').src = `imgs/shamrock${6-wrongGuesses}.jpg`
+    
+    // Add the guessed letter to the wrong guesses display
+    document.getElementById('wrongLetters').textContent += ` ${guessedLetter}`
   
-    if (wrongGuesses === maxMistakes){
+    // Update the shamrock image based on the number of wrong guesses
+    document.getElementById('shamrock').src = `img/shamrock${wrongGuesses}.jpg`
+  
+    // If max mistakes are reached, end the game
+    if (wrongGuesses === maxMistakes) {
       endGame(false)
     }
   }
+  
   
   function updateCorrectGuess(guessedLetter){
     let newDisplayedWord =''
