@@ -85,10 +85,11 @@ const wordList = [
       inputField.value = '' // Clear input field
       return // Exit function
     }
+  
     
   
     //Check if letter was already guessed
-    if(guessedLetters.includes(guessLetter)){
+    if(guessedLetters.includes(guessedLetter)){
       alert(`You already guessed '${guessedLetter}'. Try a different letter!`)
       inputField.value = '' // Clear input field
       return
@@ -139,3 +140,47 @@ const wordList = [
     }
   
   }
+
+  function endGame(won){
+    let message = '';
+
+    if (won) {
+      message = `You won! The word was "${selectedWord}". 🎉`;
+    } else {
+      message = `You lost! The correct word was "${selectedWord}". Better luck next time! 🍀`;
+    }
+  
+    setTimeout(()=> alert(message), 100)
+  }
+  
+  function restartGame() {
+    // Reset game
+    selectedWord = ''
+    displayedWord = ''
+    wrongGuesses = 0
+    guessedLetters = []
+  
+    // Hide game area and difficulty box
+    document.getElementById('gameArea').classList.add('d-none')
+    document.getElementById('difficultyBox').classList.add('d-none')
+  
+    // Show difficulty selection buttons again
+    document.getElementById('difficultySelection').classList.remove('d-none')
+  
+    // Clear UI elements
+    document.getElementById('wordDisplay').textContent = '_ _ _ _ _'
+    document.getElementById('wrongLetters').textContent = 'Wrong Guesses: '
+    document.getElementById('letterInput').value = ''
+  
+    // Reset shamrock image to starting state (I dont have one yet)
+    document.getElementById('shamrock').src = 'img/image6.jpg'
+  
+    // Auto-focus back on input (if needed)
+    document.getElementById('letterInput').focus()
+  }
+  // Allow Enter to submit a guess
+document.getElementById('letterInput').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    guessLetter()
+  }
+})
