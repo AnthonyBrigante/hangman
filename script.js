@@ -118,7 +118,7 @@ function updateWrongGuess(guessedLetter) {
     document.getElementById('wrongLetters').textContent += ` ${guessedLetter}`
 
     // Update the shamrock image based on the number of wrong guesses
-    document.getElementById('shamrock').src = `img/shamrock${wrongGuesses}.png.png`
+    document.getElementById('shamrock').src = `imgs/shamrock${6-wrongGuesses}.jpg`
 
     // If max mistakes are reached, end the game
     if (wrongGuesses === maxMistakes) {
@@ -180,7 +180,7 @@ function restartGame() {
     document.getElementById('letterInput').value = ''
 
     // Reset shamrock image to starting state
-    document.getElementById('shamrock').src = 'img/shamrock1.png.png'
+    document.getElementById('shamrock').src = 'imgs/shamrock6.jpg'
 
     // Auto-focus back on input
     document.getElementById('letterInput').focus()

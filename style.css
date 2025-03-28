@@ -38,7 +38,7 @@ body {
   }
   
   .difficulty-btn:nth-child(1) {
-    background-color: #4caf50; /* Easy - Green */
+    background-color: #1ff726; /* Easy - Green */
   }
   
   .difficulty-btn:nth-child(2) {
