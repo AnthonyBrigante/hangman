@@ -1,7 +1,7 @@
 // Word List
 const wordList = [
     'gold', 'luck', 'clover', 'rain', 'charm', 'parade', 'leprechaun', 
-    'treasure', 'celebration', 'greenery', 'shenanigans', 'tradition'
+    'treasure', 'celebration', 'greenery', 'shenanigans', 'tradition','fart','rainbow'
 ];
 
 // Declare variables
