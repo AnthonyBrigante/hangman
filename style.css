@@ -1,178 +1,229 @@
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e8f5e9; /* Light green background */
-    color: #1b5e20; /* Deep green text */
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Main Container */
-  main {
-    margin-top: 50px;
-  }
-  
-  /* Header */
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f8e9; /* Light green background */
+  color: #388e3c; /* Deep green text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+main {
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff; /* White background for clarity */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Limit the width to avoid too wide content */
+}
+
+/* Header */
+h1 {
+  font-size: 3rem; /* Bigger font for the header */
+  color: #2c6e3f; /* Darker green */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Add margin to give space around the header */
+}
+
+/* Difficulty Selection */
+#difficultySelection h3 {
+  color: #388e3c;
+  margin-bottom: 20px;
+  font-size: 1.8rem; /* Increase font size for clarity */
+}
+
+/* Difficulty Buttons */
+.difficulty-btn {
+  width: 100%;
+  max-width: 180px; /* Maximum width for buttons */
+  margin: 15px 0; /* Spacing between buttons */
+  padding: 14px;
+  font-size: 1.3rem; /* Increase font size for ease of reading */
+  color: #fff;
+  border-radius: 30px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Difficulty Button Colors */
+.difficulty-btn:nth-child(1) {
+  background-color: #66bb6a; /* Easy - Green */
+}
+
+.difficulty-btn:nth-child(2) {
+  background-color: #ffb74d; /* Medium - Yellow */
+  color: #000;
+}
+
+.difficulty-btn:nth-child(3) {
+  background-color: #ef5350; /* Hard - Red */
+}
+
+/* Difficulty Button Hover */
+.difficulty-btn:hover {
+  opacity: 0.85;
+}
+
+/* Difficulty Box */
+#difficultyBox {
+  font-size: 1.3rem; /* Slightly larger font size */
+  background-color: #c8e6c9;
+  border: 2px solid #388e3c;
+  color: #388e3c;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px; /* Add more space above */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the text */
+}
+
+/* Game Area */
+#gameArea h2 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #388e3c;
+  margin-bottom: 20px; /* Add space below the header */
+}
+
+/* Input and Guess Button */
+#letterInput {
+  font-size: 1.3rem;
+  padding: 12px;
+  border: 2px solid #388e3c;
+  border-radius: 8px;
+  background-color: #e8f5e9;
+  color: #388e3c;
+  transition: box-shadow 0.3s ease;
+  width: 100%; /* Make input field take up more space */
+  max-width: 300px; /* Limit the input field width */
+  margin: 0 auto; /* Center the input field */
+}
+
+/* Focus State for Input */
+#letterInput:focus {
+  box-shadow: 0 0 10px rgba(56, 142, 60, 0.5);
+  outline: none;
+}
+
+/* Guess Button */
+#guessBtn {
+  background-color: #ffeb3b; /* Yellow */
+  color: #000;
+  padding: 12px 20px;
+  font-size: 1.1rem; /* Increase font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  width: 100%; /* Make guess button take up more space */
+  max-width: 320px;
+  margin: 10px auto;
+}
+
+#guessBtn:hover {
+  background-color: #fbc02d;
+}
+
+/* Wrong Letters */
+#wrongLetters {
+  font-size: 1.2rem;
+  color: #d32f2f;
+  margin-top: 15px;
+}
+
+/* Shamrock Image */
+.shamrock-img {
+  width: 220px;
+  margin-top: 30px;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 20px auto; /* Center the image */
+}
+
+.shamrock-img:hover {
+  transform: scale(1.1);
+}
+
+/* Restart Button */
+#restartBtn {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the restart button take up more space */
+  max-width: 350px;
+  margin: 10px auto;
+}
+
+#restartBtn:hover {
+  background-color: #b71c1c;
+}
+
+/* Difficulty Colors */
+.easy {
+  background-color: #c8e6c9;
+  color: #388e3c;
+}
+
+.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.hard {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
   h1 {
-    font-size: 2.8rem;
-    color: #2e7d32; /* Darker green */
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      font-size: 2.2rem;
   }
-  
-  /* Difficulty Selection */
-  #difficultySelection h3 {
-    color: #1b5e20;
-    margin-bottom: 20px;
-  }
-  
+
   .difficulty-btn {
-    width: 150px;
-    margin: 10px;
-    padding: 12px;
-    font-size: 1.2rem;
-    color: #fff;
-    border-radius: 30px;
-    border: none;
-    transition: background-color 0.3s ease;
+      width: 100%;
+      margin-bottom: 15px;
   }
-  
-  .difficulty-btn:nth-child(1) {
-    background-color: #1ff726; /* Easy - Green */
-  }
-  
-  .difficulty-btn:nth-child(2) {
-    background-color: #ffc107; /* Medium - Yellow */
-    color: #000;
-  }
-  
-  .difficulty-btn:nth-child(3) {
-    background-color: #f44336; /* Hard - Red */
-  }
-  
-  .difficulty-btn:hover {
-    opacity: 0.85;
-  }
-  
-  /* Difficulty Box */
-  #difficultyBox {
-    font-size: 1.2rem;
-    background-color: #c8e6c9;
-    border: 2px solid #1b5e20;
-    color: #1b5e20;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  }
-  
-  /* Game Area */
-  #gameArea h2 {
-    font-size: 2rem;
-    letter-spacing: 5px;
-    color: #1b5e20;
-  }
-  
-  /* Input and Guess Button */
-  #letterInput {
-    font-size: 1.2rem;
-    padding: 10px;
-    border: 2px solid #1b5e20;
-    border-radius: 8px;
-    background-color: #f1f8e9;
-    color: #2e7d32;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  #letterInput:focus {
-    box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
-    outline: none;
-  }
-  
-  #guessBtn {
-    background-color: #ffeb3b; /* Yellow */
-    color: #000;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #guessBtn:hover {
-    background-color: #fbc02d;
-  }
-  
-  /* Wrong Letters */
-  #wrongLetters {
-    font-size: 1.1rem;
-    color: #d32f2f;
-  }
-  
-  /* Shamrock Image */
-  .shamrock-img {
-    width: 180px;
-    margin-top: 20px;
-    transition: transform 0.3s ease;
-  }
-  
-  .shamrock-img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Restart Button */
+
+  #guessBtn,
+  #letterInput,
   #restartBtn {
-    background-color: #d32f2f;
-    color: #fff;
-    padding: 12px 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #restartBtn:hover {
-    background-color: #b71c1c;
-  }
-  
-  /* Difficulty Colors */
-  .easy {
-    background-color: #c8e6c9;
-    color: #1b5e20;
-  }
-  
-  .medium {
-    background-color: #fff3cd;
-    color: #856404;
-  }
-  
-  .hard {
-    background-color: #f8d7da;
-    color: #721c24;
-  }
-  
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    .difficulty-btn {
       width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    #guessBtn,
-    #letterInput,
-    #restartBtn {
-      width: 100%;
-    }
-  
-    .shamrock-img {
-      width: 140px;
-    }
+      max-width: 350px; /* Max width to avoid too wide buttons */
   }
-  
+
+  .shamrock-img {
+      width: 180px;
+  }
+
+  #difficultySelection h3 {
+      font-size: 1.3rem;
+  }
+}
+/* Shamrock Image */
+.shamrock-img {
+  width: 300px; /* Increase the size of the shamrock image */
+  margin-top: 30px;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 20px auto; /* Center the image */
+}
+
+.shamrock-img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .shamrock-img {
+      width: 250px; /* Increase the size for mobile as well */
+  }
+}
